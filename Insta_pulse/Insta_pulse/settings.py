@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'users',
     'posts',
     'stories',
-    'rest_framework'
+    'rest_framework',
+    'core_apis.users_apis',  
+    'core_apis.posts_apis',  
+    'core_apis.stories_apis',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
