@@ -10,5 +10,4 @@ urlpatterns = [
     path("posts/<int:post_id>/likes/", LikeCreateView.as_view(), name="like_create"),
     path("likes/<int:like_id>/", LikeDeleteView.as_view(), name="like_delete")
 
-
 ]
