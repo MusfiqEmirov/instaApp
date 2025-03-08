@@ -6,7 +6,7 @@ from users.models import *
 
 
 class UserSerializer(serializers.ModelSerializer):
-    profile_picture = serializers.CharField(required=False, allow_null=True) #
+    image = serializers.CharField(required=False, allow_null=True) #
     class Meta:
         model = User
         fields = "__all__"
