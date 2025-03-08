@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+MEDIA_URL = '/media/'  # Şəkil və fayllara daxil olmaq üçün URL-nin başlanğıcı
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+
 
 # Application definition
 
@@ -111,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Baku'
 
 USE_I18N = True
 
