@@ -8,10 +8,15 @@ from django.http.response import Http404
 from users.models import User
 from users.serializers import UserSerializer
 
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
 
 
 
 class UserView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         user_data = User.objects.all()
@@ -47,6 +52,9 @@ class UserView(APIView):
     
 
 class UserProfileView(APIView): #username axtarisi
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+    
     def get(self, request, username):
         user = get_object_or_404(User, username=username)
         serializer = UserSerializer(user)
